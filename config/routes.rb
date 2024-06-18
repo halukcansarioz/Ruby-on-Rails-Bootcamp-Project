@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources :users, only: :index
   resources :photos, only: :index
+  resources :albums, only: :index
+
 
 
   root "users#index"
