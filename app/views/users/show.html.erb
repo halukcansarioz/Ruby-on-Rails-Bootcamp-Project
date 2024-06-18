@@ -9,7 +9,7 @@
         <p><strong>Address: </strong><%= @address['street'] %>, <%= @address['city'] %>, <%= @address['zipcode'] %></p>
       </div>
     </div>
-    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Button</button>
+    <%= link_to "Detaylar", user_path(@user), class: "ml-auto rounded-lg py-2 px-4 bg-blue-600 text-white font-medium text-lg hover:bg-blue-700" %>
   </div>
 
   <div>
@@ -17,28 +17,30 @@
     <div class="shadow-md rounded-lg overflow-hidden">
       <% @albums.each do |album| %>
         <div class="bg-white shadow-md rounded-lg mb-4">
-          <% first_photo = album.photos.first %>
+          <% photo = album['photo'] %>
           <div class="bg-white border p-4 rounded-lg mb-4 flex justify-between items-center">
             <div class="flex-shrink-0">
               <img
-                src="<%= first_photo.url %>"
-                alt="<%= first_photo.title %>"
+                src="<%= photo['url'] %>"
+                alt="<%= photo['title'] %>"
                 class="w-16 h-16 mr-4"
               />
             </div>
             <div class="text-left w-full">
-              <h3 class="text-lg mb-1 capitalize"><%= album.title %></h3>
+              <h3 class="text-lg mb-1 capitalize"><%= album['title'] %></h3>
             </div>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 open-modal" data-id="<%= album.id %>">Detayları Gör</button>
+            <button class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 open-modal" data-id="<%= album['id'] %>">Detayları Gör</button>
 
-            <div class="popupContent" id="popup-<%= album.id %>" style="display: none;">
-              <img src="<%= first_photo.url %>" alt="<%= first_photo.title %>" class="mx-auto w-32 h-32 mb-4 rounded-full">
+            <div class="popupContent" id="popup-<%= album['id'] %>" style="display: none;">
+              <img src="<%= photo['url'] %>" alt="<%= photo['title'] %>" class="mx-auto w-32 h-32 mb-4 rounded-full">
               <div class="text-left w-full">
-                <h3 class="mb-2 capitalize"><strong>Başlık: </strong><%= album.title %></h3>
-                <p class="mb-4"><strong>URL: </strong><%= first_photo.url %></p>
+                  <h3 class="mb-2 capitalize"><strong>Başlık: </strong><%= album['title'] %></h3>
+                  <p class="mb-4"><strong>URL: </strong><%= photo['url'] %></p>
               </div>
+
               <button class="close-button bg-red-600 text-white px-2 py-1 rounded-md hover:bg-red-700" style="position: fixed; bottom: 20px">Kapat</button>
             </div>
+
           </div>
         </div>
       <% end %>
