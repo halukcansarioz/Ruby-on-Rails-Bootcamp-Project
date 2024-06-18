@@ -1,4 +1,4 @@
-<div class="container mx-auto px-7 flex-grow transform scale-110">
+<div class="container mx-auto flex-grow transform ">
   <div class="max-w-lg mx-auto mt-8 custom-background">
     <%= form_with(model: @user, local: true) do |form| %>
       <div class="flex flex-col space-y-4">
@@ -33,7 +33,7 @@
           <%= address_fields.text_field :zipcode, value: @user.address["zipcode"], class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
         <% end %>
 
-        <div class="mb-4">
+        <div class="mb-8">
           <%= form.submit "Update User", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"%>
         </div>
       </div>
