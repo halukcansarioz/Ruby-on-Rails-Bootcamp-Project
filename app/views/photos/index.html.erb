@@ -1,0 +1,23 @@
+<h1>Photos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Album ID</th>
+      <th>Title</th>
+      <th>URL</th>
+      <th>Thumbnail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.id %></td>
+        <td><%= photo.albumId %></td>
+        <td><%= photo.title %></td>
+        <td><%= link_to photo.url, photo.url, target: "_blank" %></td>
+        <td><%= image_tag photo.thumbnailUrl %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
