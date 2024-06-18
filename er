@@ -1,0 +1,13 @@
+=> 
+[32m#<User:0x00007f238c167450[0m
+ id: [34m[1m1[0m,
+ name: [31m[1m"[0m[31mLeanne Graham[0m[31m[1m"[0m,
+ username: [31m[1m"[0m[31mBret[0m[31m[1m"[0m,
+ email: [31m[1m"[0m[31mSincere@april.biz[0m[31m[1m"[0m,
+ address: {[31m[1m"[0m[31mstreet[0m[31m[1m"[0m=>[31m[1m"[0m[31mKulas Light[0m[31m[1m"[0m, [31m[1m"[0m[31msuite[0m[31m[1m"[0m=>[31m[1m"[0m[31mApt. 556[0m[31m[1m"[0m, [31m[1m"[0m[31mcity[0m[31m[1m"[0m=>[31m[1m"[0m[31mGwenborough[0m[31m[1m"[0m, [31m[1m"[0m[31mzipcode[0m[31m[1m"[0m=>[31m[1m"[0m[31m92998-3874[0m[31m[1m"[0m, [31m[1m"[0m[31mgeo[0m[31m[1m"[0m=>{[31m[1m"[0m[31mlat[0m[31m[1m"[0m=>[31m[1m"[0m[31m-37.3159[0m[31m[1m"[0m, [31m[1m"[0m[31mlng[0m[31m[1m"[0m=>[31m[1m"[0m[31m81.1496[0m[31m[1m"[0m}},
+ phone: [31m[1m"[0m[31m1-770-736-8031 x56442[0m[31m[1m"[0m,
+ website: [31m[1m"[0m[31mhildegard.org[0m[31m[1m"[0m,
+ company: {[31m[1m"[0m[31mname[0m[31m[1m"[0m=>[31m[1m"[0m[31mRomaguera-Crona[0m[31m[1m"[0m, [31m[1m"[0m[31mcatchPhrase[0m[31m[1m"[0m=>[31m[1m"[0m[31mMulti-layered client-server neural-net[0m[31m[1m"[0m, [31m[1m"[0m[31mbs[0m[31m[1m"[0m=>[31m[1m"[0m[31mharness real-time e-markets[0m[31m[1m"[0m},
+ created_at: Tue, 18 Jun 2024 08:32:49.534000000 UTC +00:00,
+ updated_at: Tue, 18 Jun 2024 08:32:49.534000000 UTC +00:00,
+ image_url: [36m[1mnil[0m[32m>[0m
