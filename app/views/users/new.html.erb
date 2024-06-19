@@ -1,0 +1,47 @@
+<div class="container mx-auto flex-grow transform mt-4 ">
+  <div class="max-w-lg mx-auto mt-6 custom-background">
+    <h1 class="text-2xl font-bold mb-4">New Users</h1>
+    <%= form_with(model: @user, local: true) do |form| %>
+      <div class="flex flex-col space-y-4">
+        <div class="mb-2">
+          <%= form.label :name, "Name", class: "block text-gray-700 font-bold mb-2"%>
+          <%= form.text_field :name, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+
+        <div class="mb-2">
+          <%= form.label :email, "Email", class: "block text-gray-700 font-bold mb-2"%>
+          <%= form.text_field :email, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+
+        <div class="mb-2">
+          <%= form.label :phone, "Phone", class: "block text-gray-700 font-bold mb-2" %>
+          <%= form.text_field :phone, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+
+        <div class="mb-2">
+          <%= form.label :username, "Username", class: "block text-gray-700 font-bold mb-2" %>
+          <%= form.text_field :username, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+
+        <div class="mb-2">
+          <%= form.label :image_url, "İmage Url", class: "block text-gray-700 font-bold mb-2" %>
+          <%= form.text_field :image_url, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"%>
+        </div>
+
+        <%= form.fields_for :address do |address_fields| %>
+          <%= address_fields.label :street, "Street", class: "block text-gray-700 font-bold mb-2" %>
+          <%= address_fields.text_field :street, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          <%= address_fields.label :city, "City", class: "block text-gray-700 font-bold mb-2" %>
+          <%= address_fields.text_field :city, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          <%= address_fields.label :zipcode, "Zipcode", class: "block text-gray-700 font-bold mb-2" %>
+          <%= address_fields.text_field :zipcode, class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        <% end %>
+
+        <div class="mb-6">
+          <%= form.submit "Create User", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"%>
+          <%= link_to 'Back', users_path, class: "inline-block px-6 py-2 border border-transparent text-base font-medium hover:bg-blue-700 rounded-md text-white bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 font-bold" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   require 'httparty'
 
   def index
-    @users = User.all
+    @users = User.order(:id)
   end
 
   def show
@@ -16,6 +16,22 @@ class UsersController < ApplicationController
       photo_id = (album['id'].to_i - 1) * 50 + 5
       album_photos_response = HTTParty.get("https://jsonplaceholder.typicode.com/photos?albumId=#{album['id']}&id=#{photo_id}")
       album['photo'] = album_photos_response.parsed_response.first
+    end
+
+    @albums_present = @albums.present?
+
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to @user, notice: 'User was successfully created.'
+    else
+      render :new
     end
   end
 
@@ -37,10 +53,9 @@ class UsersController < ApplicationController
     end
   end
 
-
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :image_url, :phone, address: [:street, :city, :zipcode])
+    params.require(:user).permit(:name, :email, :username, :image_url, :phone, address: [:street, :city, :zipcode])
   end
 end

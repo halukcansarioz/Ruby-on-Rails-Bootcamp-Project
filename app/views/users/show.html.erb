@@ -16,41 +16,46 @@
     <%= link_to "Edit", edit_user_path(@user), class: "ml-auto rounded-lg py-2 px-4 bg-blue-600 text-white font-medium text-lg hover:bg-blue-700" %>
   </div>
 
-
   <div>
     <h2 class="text-2xl font-bold mb-4 mt-0">Album List</h2>
-    <div class="shadow-md rounded-lg overflow-hidden">
-      <% @albums.each do |album| %>
-        <div class="bg-white shadow-md rounded-lg mb-4">
-          <% photo = album['photo'] %>
-          <div class="bg-white border p-4 rounded-lg mb-4 flex justify-between items-center">
-            <div class="flex-shrink-0">
-              <img
-                src="<%= photo['url'] %>"
-                alt="<%= photo['title'] %>"
-                class="w-16 h-16 mr-4"
-              />
-            </div>
-            <div class="text-left w-full">
-              <h3 class="text-lg mb-1 capitalize"><%= album['title'] %></h3>
-            </div>
-            <button class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 open-modal" data-id="<%= album['id'] %>">Album Details</button>
+      <% if @albums_present %>
+        <div class="shadow-md rounded-lg overflow-hidden">
+          <% @albums.each do |album| %>
+            <div class="bg-white shadow-md rounded-lg mb-4">
+              <% photo = album['photo'] %>
+              <div class="bg-white border p-4 rounded-lg mb-4 flex justify-between items-center">
+                <div class="flex-shrink-0">
+                  <img
+                    src="<%= photo['url'] %>"
+                    alt="<%= photo['title'] %>"
+                    class="w-16 h-16 mr-4"
+                  />
+                </div>
+                <div class="text-left w-full">
+                  <h3 class="text-lg mb-1 capitalize"><%= album['title'] %></h3>
+                </div>
+                <button class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 open-modal" data-id="<%= album['id'] %>">Album Details</button>
 
-            <div class="popupContent" id="popup-<%= album['id'] %>" style="display: none;">
-              <img src="<%= photo['url'] %>" alt="<%= photo['title'] %>" class="mx-auto w-32 h-32 mb-4 rounded-full">
-              <div class="text-left w-full">
-                  <h3 class="mb-2 capitalize"><strong>Title: </strong><%= album['title'] %></h3>
-                  <p class="mb-4"><strong>URL: </strong><%= photo['url'] %></p>
+                <div class="popupContent" id="popup-<%= album['id'] %>" style="display: none;">
+                  <img src="<%= photo['url'] %>" alt="<%= photo['title'] %>" class="mx-auto w-32 h-32 mb-4 rounded-full">
+                  <div class="text-left w-full">
+                    <h3 class="mb-2 capitalize"><strong>Title: </strong><%= album['title'] %></h3>
+                    <p class="mb-4"><strong>URL: </strong><%= photo['url'] %></p>
+                  </div>
+
+                  <button class="close-button bg-red-600 text-white px-2 py-1 rounded-md hover:bg-red-700" style="position: fixed; bottom: 20px">Close</button>
+                </div>
+
               </div>
-
-              <button class="close-button bg-red-600 text-white px-2 py-1 rounded-md hover:bg-red-700" style="position: fixed; bottom: 20px">Close</button>
             </div>
-
-          </div>
+          <% end %>
         </div>
+      <% else %>
+        <p id="no-results" class=" text-red-500"><strong>Albums not found!</strong></p>
       <% end %>
     </div>
   </div>
+
 </div>
 
 <script>
