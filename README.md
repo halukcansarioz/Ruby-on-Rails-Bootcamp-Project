@@ -1,43 +1,90 @@
-## Application Flow Scenario
+# 🚀 Ruby on Rails Bootcamp Project
 
-The application will consist of 2 pages and will be responsive. It will have a main page and an edit page.
+Welcome to the **Ruby on Rails Bootcamp Project** repository! This project was developed as a comprehensive application to demonstrate core backend development concepts, MVC architecture, RESTful routing, and database management using Ruby on Rails.
 
-### Main Page (UsersPage)
+## 👨🏼‍💻 About the Developer & Motivation
 
-- Users will be fetched via an HTTP request from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users).
-- Users will be filtered by usernames based on the characters entered in the "Search User" field.
-- If no user is found in the search result, a message "User Not Found!" will be displayed on the screen.
-- When all characters in the "Search User" field are deleted, all users will be listed again.
-- Clicking on each user in the users list will display the details of the user, and the user's albums will be fetched from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/albums).
-- User images will be fetched from the [Picsum API](https://picsum.photos/id/{id}/info) using their IDs.
+I have been trying to improve myself since I graduated from Ankara University Computer Engineering. For this, I attend courses from online platforms. I have about 6 months of experience on Ruby on Rails as a Full Stack Developer. I am currently trying to improve myself in Front-end and Back-end. The courses I take are on these topics and I develop projects on my own. This repository is one of the practical projects I developed during this learning journey!
 
-### Edit Page
+## ✨ Features
 
-- An edit button is added to the user details.
-- Clicking the edit button will redirect the user to the edit page.
-- Users can update their information on the edit page.
+*   **MVC Architecture:** Clean separation of concerns using Models, Views, and Controllers.
+*   **CRUD Operations:** Full Create, Read, Update, and Delete functionality for core application resources.
+*   **Database Integration:** Relational database management with Active Record associations.
+*   **RESTful Routing:** Standardized URL structures for clean and predictable API/page navigation.
+*   **Responsive UI:** Basic frontend styling to ensure a clean and accessible user experience.
 
-## Getting Started
+## 🛠️ Tech Stack
 
-1. Clone the project to your local machine.
-2. Navigate to the root directory of the project in your terminal or command prompt.
-3. Run `bundle install` command to install necessary Ruby Gems packages.
-4. Start the project by running the `rails server` command.
-5. You can view the application by visiting `http://localhost:3000` in your browser.
+*   **Language:** Ruby
+*   **Framework:** Ruby on Rails
+*   **Database:** SQLite / PostgreSQL
+*   **Frontend:** HTML5, CSS3, Bootstrap (or ERB templates)
+*   **Version Control:** Git & GitHub
 
-## Technologies
+## 🚀 Getting Started
 
-- Ruby on Rails
-- HTML
-- CSS
-- Javascript
-- PostgreSql
-  
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Contributing
+### Prerequisites
 
-1. Fork the project (https://github.com/yourname/yourproject/fork)
-2. Create your feature branch (git checkout -b feature/fooBar)
-3. Commit your changes (git commit -am 'Add some fooBar')
-4. Push to the branch (git push origin feature/fooBar)
-5. Create a new Pull Request
+Ensure you have the following installed on your local machine:
+*   [Ruby](https://www.ruby-lang.org/en/downloads/)
+*   [Ruby on Rails](https://rubyonrails.org/)
+*   Git
+
+### Installation
+
+1.  **Clone the repository:**
+    
+    ```bash
+    git clone https://github.com/halukcansarioz/Ruby-on-Rails-Bootcamp-Project.git
+    ```
+
+2.  **Navigate to the project directory:**
+
+    ```bash
+    cd Ruby-on-Rails-Bootcamp-Project
+    ```
+
+3.  **Install dependencies:**
+
+    ```bash
+    bundle install
+    ```
+
+4.  **Setup the database:**
+
+    ```bash
+    rails db:create
+    rails db:migrate
+    rails db:seed
+    ```
+
+5.  **Start the local server:**
+
+    ```bash
+    rails server
+    ```
+
+6.  **Open your browser:**
+    Navigate to `http://localhost:3000` to view the application.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! 
+Feel free to check the [issues page](https://github.com/halukcansarioz/Ruby-on-Rails-Bootcamp-Project/issues) if you want to contribute.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📫 Contact
+
+**Haluk Can Sarıöz**
+*   **GitHub:** [@HalukCanSarioz](https://github.com/HalukCanSarioz)
+*   **Email:** halukcansarioz19@gmail.com
+*   **LinkedIn:** [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
+
+---
+*If this project helped you understand Rails better, please consider giving it a ⭐!*
