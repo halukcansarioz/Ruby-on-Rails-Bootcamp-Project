@@ -1,136 +1,138 @@
+
 # 🛤️ Ruby on Rails Bootcamp Project
-### (Kodluyoruz & Patika.dev Ruby on Rails Bootcamp Bitirme Projesi)
+### (Kodluyoruz & Patika.dev Ruby on Rails Bootcamp Capstone Project)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Ruby on Rails](https://img.shields.io/badge/Ruby%20on%20Rails-CC0000?style=flat&logo=ruby-on-rails&logoColor=white)](#)
 [![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white)](#)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](#)
 
-Bu repo, **Kodluyoruz & Patika.dev Ruby on Rails Bootcamp** programı kapsamında geliştirilmiş, MVC mimarisi, RESTful yönlendirme ve veritabanı yönetimi gibi temel backend geliştirme kavramlarını uygulamalı olarak gösteren kapsamlı bir projedir.
+This repo is a comprehensive project developed as part of the **Kodluyoruz & Patika.dev Ruby on Rails Bootcamp** program, demonstrating core backend development concepts such as MVC architecture, RESTful routing, and database management in a hands‑on manner.
 
-## 📚 İçindekiler
-- [Proje Hakkında](#proje-hakkında)
-- [Özellikler](#özellikler)
-- [Teknoloji Yığını](#teknoloji-yığını)
-- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
-- [Proje Yapısı](#proje-yapısı)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletisim)
-- [Lisans](#lisans)
-
----
-
-## Proje Hakkında
-Bu proje, Ruby on Rails framework'ünün temel prensiplerini uygulamalı olarak öğrenmek ve backend geliştirme becerilerini pekiştirmek amacıyla geliştirilmiştir. MVC (Model-View-Controller) mimarisi, Active Record ilişkileri ve RESTful API tasarımı gibi konuları kapsar.
-
-* **Geliştirici:** Haluk Can SARIÖZ
-* **Program:** Kodluyoruz & Patika.dev Ruby on Rails Bootcamp
-* **Amaç:** Backend geliştirme becerilerini proje tabanlı öğrenme
+## 📚 Table of Contents
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation & Usage](#installation--usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
-## Özellikler
-* **MVC Mimarisi:** Model, View ve Controller katmanlarının temiz ayrımı.
-* **CRUD Operasyonları:** Temel uygulama kaynakları için tam Create, Read, Update ve Delete işlevselliği.
-* **Veritabanı Entegrasyonu:** Active Record ilişkileri ile ilişkisel veritabanı yönetimi.
-* **RESTful Yönlendirme:** Temiz ve öngörülebilir API/sayfa navigasyonu için standartlaştırılmış URL yapıları.
-* **Duyarlı Arayüz:** Temiz ve erişilebilir bir kullanıcı deneyimi için temel frontend stili.
+## About the Project
+This project was developed to learn the fundamental principles of the Ruby on Rails framework hands‑on and to reinforce backend development skills. It covers topics such as the MVC (Model‑View‑Controller) architecture, Active Record associations, and RESTful API design.
+
+- **Developer:** Haluk Can SARIÖZ
+- **Program:** Kodluyoruz & Patika.dev Ruby on Rails Bootcamp
+- **Goal:** Project‑based learning of backend development skills
 
 ---
 
-## Teknoloji Yığını
-| Katman | Teknoloji |
-|--------|-----------|
-| **Dil** | Ruby |
+## Features
+- **MVC Architecture:** Clean separation of Model, View, and Controller layers.
+- **CRUD Operations:** Full Create, Read, Update, and Delete functionality for core application resources.
+- **Database Integration:** Relational database management with Active Record associations.
+- **RESTful Routing:** Standardized URL structures for clean and predictable API/page navigation.
+- **Responsive Interface:** Basic frontend styling for a clean and accessible user experience.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|:-------|:-----------|
+| **Language** | Ruby |
 | **Framework** | Ruby on Rails |
-| **Veritabanı** | SQLite / PostgreSQL |
-| **Frontend** | HTML5, CSS3, Bootstrap (ERB şablonları) |
-| **Versiyon Kontrol** | Git & GitHub |
+| **Database** | SQLite / PostgreSQL |
+| **Frontend** | HTML5, CSS3, Bootstrap (ERB templates) |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## Kurulum ve Kullanım
+## Installation & Usage
 
-### Ön Gereksinimler
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki araçların kurulu olduğundan emin olun:
-* [Ruby](https://www.ruby-lang.org/en/downloads/)
-* [Ruby on Rails](https://rubyonrails.org/)
-* Git
+### Prerequisites
+Make sure the following tools are installed on your local machine:
+- [Ruby](https://www.ruby-lang.org/en/downloads/)
+- [Ruby on Rails](https://rubyonrails.org/)
+- Git
 
-### Kurulum Adımları
+### Installation Steps
 
-**1. Depoyu klonlayın:**
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/halukcansarioz/Ruby-on-Rails-Bootcamp-Project.git
 ```
 
-**2. Proje dizinine gidin:**
+**2. Navigate to the project directory:**
 ```bash
 cd Ruby-on-Rails-Bootcamp-Project
 ```
 
-**3. Bağımlılıkları yükleyin:**
+**3. Install dependencies:**
 ```bash
 bundle install
 ```
 
-**4. Veritabanını hazırlayın:**
+**4. Prepare the database:**
 ```bash
 rails db:create
 rails db:migrate
 rails db:seed
 ```
 
-**5. Geliştirme sunucusunu başlatın:**
+**5. Start the development server:**
 ```bash
 rails server
 ```
 
-**6. Tarayıcınızda açın:**
-`http://localhost:3000` adresine giderek uygulamayı görüntüleyin.
+**6. Open in your browser:**
+Navigate to `http://localhost:3000` to view the application.
 
 ---
 
-## Proje Yapısı
+## Project Structure
 ```text
 Ruby-on-Rails-Bootcamp-Project/
 ├── app/
-│   ├── controllers/      # Uygulama kontrolcüleri
-│   ├── models/           # Veri modelleri
-│   └── views/            # Görünüm şablonları
-├── config/               # Uygulama yapılandırması
-├── db/                   # Veritabanı migrasyonları
-├── bin/                  # Çalıştırılabilir scriptler
-├── Dockerfile            # Docker yapılandırması
-├── Gemfile               # Ruby bağımlılıkları
-└── README.md             # Proje dökümantasyonu
+│   ├── controllers/      # Application controllers
+│   ├── models/           # Data models
+│   └── views/            # View templates
+├── config/               # Application configuration
+├── db/                   # Database migrations
+├── bin/                  # Executable scripts
+├── Dockerfile            # Docker configuration
+├── Gemfile               # Ruby dependencies
+└── README.md             # Project documentation
 ```
 
 ---
 
-## Katkıda Bulunma
-Katkılarınız, hata bildirimleriniz ve özellik istekleriniz memnuniyetle karşılanır!
+## Contributing
+Contributions, bug reports, and feature requests are welcome!
 
-1. Bu depoyu **Fork**'layın.
-2. Bir **Branch** oluşturun (`git checkout -b feature/AmazingFeature`).
-3. Değişikliklerinizi **Commit** edin (`git commit -m 'Ekleme: Harika özellik'`).
-4. Kodlarınızı **Push**'layın (`git push origin feature/AmazingFeature`).
-5. Bir **Pull Request** açın.
+1. **Fork** this repository.
+2. Create a **Branch** (`git checkout -b feature/AmazingFeature`).
+3. Make your changes and **Commit** (`git commit -m 'Add: Amazing feature'`).
+4. **Push** your code (`git push origin feature/AmazingFeature`).
+5. Open a **Pull Request**.
 
 ---
 
-<a name="iletisim"></a>
-## İletişim
+<a name="contact"></a>
+## Contact
 **Haluk Can Sarıöz**
 - GitHub: [@halukcansarioz](https://github.com/halukcansarioz)
-- E-posta: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
+- Email: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
 - LinkedIn: [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
 
 ---
 
-*Bu proje Rails'i daha iyi anlamanıza yardımcı olduysa ⭐ vermeyi unutmayın!*
+*If this project helped you understand Rails better, don't forget to ⭐ it!*
 
 ---
 
-## Lisans
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+## License
+This project is licensed under the [MIT License](LICENSE).
