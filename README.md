@@ -21,6 +21,8 @@ This repo is a comprehensive project developed as part of the **Kodluyoruz & Pat
 
 ---
 
+
+
 ## About the Project
 This project was developed to learn the fundamental principles of the Ruby on Rails framework hands‑on and to reinforce backend development skills. It covers topics such as the MVC (Model‑View‑Controller) architecture, Active Record associations, and RESTful API design.
 
